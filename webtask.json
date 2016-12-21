@@ -1,0 +1,16 @@
+{
+  "title": "Change Password Custom Verification",
+  "name": "auth0-change-password-custom-verification",
+  "version": "1.0.0",
+  "author": "arcseldon",
+  "description": "Old password verification step introduced ahead of change password",
+  "type": "application",
+  "repository": "https://github.com/tawawa/auth0-change-password-custom-verification.git",
+  "keywords": [
+    "auth0",
+    "email",
+    "verification",
+    "change password",
+    "webtask"
+  ]
+}

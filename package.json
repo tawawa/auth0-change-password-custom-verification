@@ -1,0 +1,38 @@
+{
+  "name": "auth0-change-password-custom-verification",
+  "version": "0.0.1",
+  "description": "Change Password with old password verification",
+  "main": "server.js",
+  "scripts": {
+    "start": "wt-bundle server.js -o ./build/bundle.js && node ./build/bundle.js",
+    "bundle": "wt-bundle webtask.js -o ./build/bundle.js",
+    "edit": "wt edit --profile demo-workshop-default password-reset-custom-verification",
+    "update": "wt update --profile demo-workshop-default password-reset-custom-verification build/bundle.js",
+    "deploy": "npm run bundle && npm run update",
+    "create": "wt create --name password-reset-custom-verification --profile demo-workshop-default build/bundle.js",
+    "logs": "wt logs --profile demo-workshop-default"
+  },
+  "keywords": [
+    "auth0",
+    "email",
+    "verification",
+    "change password",
+    "webtask"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tawawa/auth0-change-password-custom-verification.git"
+  },
+  "author": "arcseldon",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.12.4",
+    "dotenv": "^2.0.0",
+    "express": "4.14.0",
+    "jwt-decode": "^2.1.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "webtask-tools": "^3.1.1"
+  }
+}
