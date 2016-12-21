@@ -14,7 +14,7 @@ Here is an example:
 AUTH0_DOMAIN=mytenant.auth0.com
 AUTH0_CLIENT_ID=myClientID
 AUTH0_CONNECTION_NAME=myConnectionName
-AUTH0_MANAGEMENT_TOKEN=myManagementToent
+AUTH0_MANAGEMENT_TOKEN=myManagementToken
 ```
 
 The Client Id is the id of a Client you define in the Dashboard for your Auth0 Tenant with a Database Connection to the Connection
