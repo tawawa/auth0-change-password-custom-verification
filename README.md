@@ -4,17 +4,15 @@ It provides a solution to customization of the Auth0 change password flow such t
 prior to accepting a new password. Furthermore, no password verification email is sent out with the change password update.
 
 
-## Required Secrets
+## Running locally
 
-To run locally, just create a `.env` file in the base of the project, and provide the necessary values.
+To run the sample extension locally:
 
-Here is an example:
+Rename `.env.sample` as `.env` and add the required values for each key value pair.
 
-```
-AUTH0_DOMAIN=mytenant.auth0.com
-AUTH0_CLIENT_ID=myClientID
-AUTH0_CONNECTION_NAME=myConnectionName
-AUTH0_MANAGEMENT_TOKEN=myManagementToken
+```bash
+$ npm install
+$ npm start
 ```
 
 The Client Id is the id of a Client you define in the Dashboard for your Auth0 Tenant with a Database Connection to the Connection
@@ -29,24 +27,16 @@ See [here](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id) f
 So the Management Token should have `update:user` and `update:users_app_metadata` scopes assigned.
 
 
-## Running locally
-
-With `.env` populated, simply do the following:
-
-To run the sample extension locally:
-
-```bash
-$ npm install
-$ npm start
-```
-
 ## Deploying as Webtask 
 
-Here, you need to create the Webtask and supply the secrets it will use to execute at Runtime.
+Rename `.env.sample` as `.env` and add the required values for each key value pair.
 
-Here, i run webtasks with several different profiles, so am particular about specifying my particular profile.
+```bash
+$ ./deploy 
+```
 
-E.g/
+
+This is equivalent to running something like:
 
 ```
 wt create --name password-reset-custom-verification --profile demo-workshop-default build/bundle.js \
@@ -54,12 +44,6 @@ wt create --name password-reset-custom-verification --profile demo-workshop-defa
 --secret AUTH0_CLIENT_ID="K8g5hMEnxxxxxxxxTemvc1xPK7m" \
 --secret AUTH0_CONNECTION_NAME="DBConnection" \
 --secret AUTH0_MANAGEMENT_TOKEN="eyJhbGcxxxxxx.......xxxxxxxxxxj5jtDu3rrw" 
-```
-
-Once we have created the webtask, then run:
-
-```bash
-$ npm run deploy 
 ```
 
 The webtask should now be running.

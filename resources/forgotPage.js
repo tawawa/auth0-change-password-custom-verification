@@ -1,3 +1,6 @@
+'use strict';
+
+module.exports = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,3 +82,4 @@
 </script>
 </body>
 </html>
+`;
