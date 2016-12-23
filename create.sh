@@ -9,7 +9,7 @@ echo $secrets
 # exit
 
 wt create \
-   --name password-reset-custom-verification \
+   --name password-reset \
    --profile $profile \
    ./build/bundle.js  \
    $secrets

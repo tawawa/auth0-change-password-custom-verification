@@ -6,10 +6,10 @@
   "scripts": {
     "start": "wt-bundle server.js -o ./build/bundle.js && node ./build/bundle.js",
     "bundle": "wt-bundle webtask.js -o ./build/bundle.js",
-    "edit": "wt edit --profile demo-workshop-default password-reset-custom-verification",
-    "update": "wt update --profile demo-workshop-default password-reset-custom-verification build/bundle.js",
+    "edit": "wt edit --profile demo-workshop-default password-reset",
+    "update": "wt update --profile demo-workshop-default password-reset build/bundle.js",
     "deploy": "npm run bundle && npm run update",
-    "create": "wt create --name password-reset-custom-verification --profile demo-workshop-default build/bundle.js",
+    "create": "wt create --name password-reset --profile demo-workshop-default build/bundle.js",
     "logs": "wt logs --profile demo-workshop-default"
   },
   "keywords": [
